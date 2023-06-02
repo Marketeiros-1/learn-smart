@@ -1,0 +1,806 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Roboto+Mono:wght@100&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    
+    box-shadow: 0 0 10px black ;
+    background-color: rgb(33, 33, 33);
+}
+header h1{
+    padding:0;
+    color: white;
+}
+
+nav{
+display: flex;
+justify-content: space-around;
+padding-top: 50px;
+
+
+}
+.card
+{
+    display: flex;
+    height: 50%;
+    align-items: center;
+    width: 90%;
+}
+
+nav .card p{
+    font-size: 2.5rem;
+    padding: 1.5rem;
+
+}
+
+nav img{
+    width: 45%;
+    height: 40vh;
+    border-radius: 20px 40px;
+    box-shadow: 3px 3px 10px black;
+}
+
+.ap{
+    background-color: rgba(48,58,128,255);
+    margin: 2% auto;
+    display: flex;
+    justify-content: center;
+    width: 50%; 
+    border-radius: 30px;
+    box-shadow: 0px 0px 8px rgb(42, 42, 42);
+}
+
+.ap p{
+    color: white;
+    padding: 2rem;
+    font-size: 1.9rem;
+}
+
+h1{
+    padding:5% 0 0 0;
+    text-align:center;
+}
+
+main{
+    margin: 0 auto;
+    display: flex;
+    height: 50vh;
+    width:fit-content;
+    align-items: center;
+    overflow-x: scroll;
+    gap: 2rem   ;
+    width: 98vw;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+main .card{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(55, 55, 55);
+    width: fit-content;
+    border-radius: 20px;
+    height:min-content;
+    box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+    backdrop-filter: blur(6px);
+    cursor: pointer;
+    transition: all 0.5s;
+    user-select: none;
+    font-weight: bolder;
+
+}
+
+main .card:hover {
+    border: 1px solid black;
+    transform: scale(1.09);
+  }
+  
+main .card:active {
+    transform: scale(0.95);
+  }
+
+main .card h2{
+    margin: 10px auto;
+    color: white;
+}
+.inform img{
+    width: 300px; 
+   background-color: aqua;
+
+
+}
+
+.basic {
+    background-color: rgb(102, 0, 255);
+    padding: 10px  ;
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    bottom: 30px;
+    overflow: hidden;
+}
+
+
+
+
+.basic p , span{
+    color:white ;
+    margin: 0;
+}
+
+footer{
+    padding:2% 0;
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:space-between;
+    background-color:rgb(23, 28, 40);
+}
+ 
+.fot{
+    padding:2%;
+    border-radius:0 50px 50px 0;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    background-color: rgb(131, 135, 209);
+}
+
+.btn-contact{
+    padding:3%;
+    border:none;
+    border-radius:50px;
+    background-color:rgb(23, 28, 40);
+    color: #fff;
+}
+
+.btn-contact:hover{
+    transform:translate(3);
+    cursor:pointer;
+}
+
+.organization p{
+    text-align:center;
+    position:static;
+}
+
+footer h2{
+    color:#fff;
+ }
+ 
+ label{
+    padding:0 0 5% 0;
+    font-size:20px;
+ }
+ 
+footer ul{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    list-style:none;
+ }
+ 
+footer li{
+    color:#fff;
+}
+
+
+footer img{
+   width:50%;
+}
+
+.signUp{
+    display:flex;
+    flex-direction:column;
+    text-align:center;
+}
+
+.signUp ul{
+    display:flex;
+    flex-direction:row;
+} */
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Roboto+Mono:wght@100&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+    cursor:default;
+}
+
+.js .anime {
+	opacity: 0;
+	transform: translate3D(-50px, 0px, 0px);
+}
+
+.js .anime-init {
+	opacity: 1;
+	transform: translate3D(0px, 0px, 0px);
+	transition: .3s all ease;
+}
+
+/* .mySlides {display: none} */
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+
+  /* Next & previous buttons */
+.prev, .next {
+    z-index: 2;
+    cursor: pointer;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+
+  .prev{
+    position: absolute;
+    left: 0;
+  }
+  .next{
+    position: absolute;
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+    color: #fff;
+  }
+
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+
+header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    box-shadow: 0 0 10px black ;
+    background-color: rgb(33, 33, 33);
+}
+header h1{
+    padding:0;
+    color: white;
+}
+
+header a{
+    color: #fff;
+    margin: .4rem .0rem;
+    text-decoration: none;
+    background-color:rgb(7, 6, 73) ;
+    padding: .5rem 2rem;
+    border-radius:10px;
+    transition: .3s;
+}
+header a:hover{
+    transform: scale(1.2);
+    cursor:pointer;
+}
+
+header a:active{
+    transform: scale(1);
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 50px;
+    
+
+}
+nav .conteudo{
+    display: flex;
+    height: 50%;
+    align-items: center;
+    width: 90%;
+}
+
+.conteudo p{
+    font-size: 2.5rem;
+    padding: 1.5rem;
+
+}
+
+nav img{
+    width: 45%;
+    height: 40vh;
+    border-radius: 20px 40px;
+    box-shadow: 3px 3px 10px black;
+}
+
+.ap{
+    background-color: rgba(48,58,128,255);
+    margin: 2% auto;
+    display: flex;
+    justify-content: center;
+    width: 50%; 
+    border-radius: 30px;
+    box-shadow: 0px 0px 8px rgb(30, 30, 30);
+}
+
+.ap p{
+    color: white;
+    padding: 2rem;
+    font-size: 1.9rem;
+}
+
+h1{
+    padding:5% 0 0 0;
+    text-align:center;
+}
+
+@media(max-width:798px ){
+    nav{
+        padding-top: 20px;
+    }
+    nav .conteudo{
+        flex-direction: column;
+        height: 40%;
+        align-items: center;
+        width: 97%;
+        margin: 0 auto;
+    }
+    
+    .conteudo p{
+        font-size: 1.9rem;
+        font-weight: 900;
+        border-left: 5px solid rgb(1,0,57) ;
+        border-right: 5px solid rgb(1,0,57) ;
+        padding: 1rem; 
+        word-spacing: 3px;
+    
+    }
+    
+    nav img{
+        width: 80%;
+        height: 36vh;
+        border-radius: 20px 30px;
+        box-shadow: 3px 3px 10px black;
+    }
+    
+    .ap{
+        margin-top: 4%;
+        width: 96%; 
+        border-radius: 20px;
+        box-shadow: 0px 0px 10px rgb(30, 30, 30);
+    }
+    
+    .ap p{
+        padding: 1.5rem;
+        font-size: 1.9rem;
+    }
+    
+    h1{
+        width: fit-content;
+        margin: 0 auto;
+        padding:5% 0 0 0;
+        text-align:center;
+        border-bottom: 4px solid rgb(1,0,57);
+    }
+}
+
+main{
+    display: flex;
+    justify-content: space-evenly;
+    height: 70vh;
+    width:fit-content;
+    align-items: center;
+    gap: 2rem   ;
+    width: 98vw;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    transform: scale(1);
+    z-index: 2;
+    background-color: rgb(55, 55, 55);
+    width: fit-content;
+    border-radius: 20px;
+    height:min-content;
+    box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+    backdrop-filter: blur(6px);
+    cursor: pointer;
+    transition: all 0.5s;
+    user-select: none;
+    font-weight: bolder;
+    
+}
+
+.card:hover {
+    border: 1px solid black;
+    transform: scale(1.09);
+    cursor:pointer;
+    }
+    
+.card:active {
+    transform: scale(0.95);
+}
+
+.card h2{
+    margin: 10px auto;
+    color: white;
+}
+.inform img{
+    width: 300px; 
+    background-color: aqua;
+    cursor:pointer;
+}
+
+.basic {
+    background-color: rgb(102, 0, 255);
+    padding: 10px  ;
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    bottom: 30px;
+    overflow: hidden;
+    cursor:pointer;
+}
+
+.basic p , span{
+    color:white ;
+    margin: 0;
+}
+
+.value{
+    margin:1% 0 0 10%;
+    width:80%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    border-left:3px solid rgb(131, 135, 209);
+    border-right:3px solid rgb(131, 135, 209);
+}
+
+.value span{
+    text-align:center;
+    color:rgb(131, 135, 209);
+}
+
+.value p{
+    padding:2% 2% 0 2%;
+    font-size:30px;
+    text-align:justify;
+}
+
+.cta{
+    background-color: rgb(23, 28, 40);
+    border-radius:  20px;
+    display: flex;
+    padding: 2rem;
+    font-size: 2rem;
+    transition: 400ms;
+    align-items: center;
+}
+
+.cta span{
+    transition: 400ms;
+    color: #fff;
+    cursor: pointer;
+}
+.cta :hover{
+transform: scale(1.1);
+}
+
+@media(max-width:798px ){
+
+    main{
+        height: fit-content;
+        flex-direction: column;
+        width:fit-content;
+        align-items: center;
+        gap: 1rem   ;
+        width: 98vw;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    .card{
+        margin-top: 1rem;
+        flex-direction: column;
+        transform: scale(1);
+        border-radius: 20px;
+        box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+        backdrop-filter: blur(9px);
+        cursor: pointer;
+        transition: all 0.5s;
+        user-select: none;
+        font-weight: bolder;
+    
+    }
+    
+    .card:hover {
+        border: 1px solid black;
+        transform: scale(1.09);
+        }
+        
+    .card:active {
+        transform: scale(0.95);
+    }
+    
+    .card h2{
+        margin: 5px auto;
+        color: white;
+    }
+    .inform img{
+        width: 300px; 
+    }
+    
+    .basic {
+        background-color: rgb(102, 0, 255);
+        padding: 10px  ;
+        display: flex;
+        justify-content: space-evenly;
+        position: relative;
+        bottom: 20px;
+        overflow: hidden;
+    }
+    
+    .basic p , span{
+        color:white ;
+        font-size: .8rem;
+        margin: 0;
+    }
+
+}
+
+footer{
+    padding:2% 0;
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:space-between;
+    background-color:rgb(23, 28, 40);
+}
+ 
+.fot{
+    padding:2%;
+    border-radius:0 50px 50px 0;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    background-color: rgb(131, 135, 209);
+}
+
+.btn-contact{
+    transition: 500ms;
+    padding:3%;
+    border:none;
+    border-radius:50px;
+    background-color:rgb(23, 28, 40);
+    color: #fff;
+}
+
+.btn-contact:hover{
+    transform: scale(1.2);
+    cursor:pointer;
+   
+}
+
+.organization p{
+    text-align:center;
+    position:static;
+}
+
+footer h2{
+    color:#fff;
+ }
+ 
+ label{
+    padding:0 0 5% 0;
+    font-size:20px;
+ }
+
+
+footer ul{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    list-style:none;
+ }
+ 
+footer li{
+    color:#fff;
+    list-style:none;
+}
+
+
+footer i{
+   width:100%;
+   aspect-ratio: 4/3;
+   object-fit: contain;
+   font-size:4rem;
+   cursor:pointer;
+   background-size:contain;
+}
+
+.signUp{
+    display:flex;
+    flex-direction:column;
+    text-align:center;
+}
+
+.signUp ul{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-evenly;
+    gap:15px;
+    position: relative;
+    right: 10px;
+}
+
+
+#fb,#ing,#tw,#email{
+    transition: 300ms;
+    object-fit: contain;
+    margin-top: 1rem;
+}
+
+    footer #fb:hover{
+        transform: scale(1.2);
+        object-fit: contain;
+        background-color:blue;
+        filter: contrast(contain);
+        border-radius:5px;
+    }
+
+    footer #ing:hover{
+        transform: scale(1.2);
+        background-color: palevioletred;
+        object-fit: contain;
+        border-radius:5px;
+    }
+    footer #email:hover{
+        transform: scale(1.2);
+        background-color: rgb(244, 76, 76);
+        object-fit: contain;
+        border-radius:5px;
+    }
+    footer #tw:hover{
+        transform: scale(1.2);
+        background-color: rgb(68, 178, 242);
+        object-fit: contain;
+        border-radius:5px;
+    }
+
+
+
+@media (max-width:789px){
+    footer{
+        padding:2% 0;
+        display:flex;
+        flex-direction:column;
+        align-items:start;
+        justify-content:none;
+    }
+     
+    .fot{
+        padding:3%;
+        border-radius:0 30px 30px 0;
+        display:flex;
+        width: 70vw;
+    }
+    
+    .btn-contact{
+        padding:3%;
+        border:none;
+        border-radius:20px;
+        background-color:rgb(23, 28, 40);
+        color: #fff;
+    }
+    
+    .btn-contact:hover{
+     transform: scale(1.2);
+        cursor:pointer;
+    }
+    
+    footer h2{
+        color:#fff;
+     }
+     
+     label{
+        padding:0 0 5% 0;
+        font-size:23px;
+     }
+     
+    footer ul{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content: center;
+        width: 70vw;
+        list-style:none;
+     }
+     
+    footer li{
+        color:#fff;
+    }
+    
+    
+    footer img{
+       width: 50%;
+    }
+    
+    .signUp{
+        display:flex;
+        flex-direction:column;
+        text-align:center;
+   object-fit: contain;
+    }
+    
+    .signUp ul{
+        display:flex;
+        flex-direction:row;
+        width: 97vw;
+    }
+    .signUp h2{
+        text-align: center;
+        position: relative;
+        right: 16%;
+    }
+#fb,#ing,#tw,#email{
+    transition: 300ms;
+    object-fit: contain;
+    margin-top: 1rem;
+}
+
+    footer #fb:hover{
+        transform: scale(1.2);
+        background-color: blue;
+        object-fit: contain;
+        filter: contrast(contain);
+    }
+
+    footer #ing:hover{
+        transform: scale(1.2);
+        background-color: palevioletred;
+        object-fit: contain;
+    }
+    footer #email:hover{
+        transform: scale(1.2);
+        background-color: rgb(244, 76, 76);
+        object-fit: contain;
+    }
+    footer #tw:hover{
+        transform: scale(1.2);
+        background-color: rgb(68, 178, 242);
+        object-fit: contain;
+    }
+}
